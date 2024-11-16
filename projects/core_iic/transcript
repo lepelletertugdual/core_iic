@@ -1,0 +1,139 @@
+# do run_modelsim.tcl 
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package pkg_gen_heartbeat
+# -- Compiling package body pkg_gen_heartbeat
+# -- Loading package pkg_gen_heartbeat
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package pkg_mgt_file
+# -- Compiling package body pkg_mgt_file
+# -- Loading package pkg_mgt_file
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling package pkg_task
+# -- Compiling package body pkg_task
+# -- Loading package pkg_task
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity core_iic_master
+# -- Compiling architecture logic of core_iic_master
+# ** Warning: C:/Users/Tugdual LE PELLETER/Documents/Recherche/Repositories/core_iic/sources/design/core_iic_master.vhd(93): Choice in CASE statement alternative must be locally static.
+# ** Warning: C:/Users/Tugdual LE PELLETER/Documents/Recherche/Repositories/core_iic/sources/design/core_iic_master.vhd(96): Choice in CASE statement alternative must be locally static.
+# ** Warning: C:/Users/Tugdual LE PELLETER/Documents/Recherche/Repositories/core_iic/sources/design/core_iic_master.vhd(99): Choice in CASE statement alternative must be locally static.
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Loading package pkg_gen_heartbeat
+# -- Compiling entity gen_heartbeat
+# -- Compiling architecture rtl of gen_heartbeat
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Loading package pkg_task
+# -- Compiling entity model_eeprom_iic
+# -- Compiling architecture arch of model_eeprom_iic
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Loading package pkg_mgt_file
+# -- Loading package pkg_gen_heartbeat
+# -- Compiling entity bch_core_iic
+# -- Compiling architecture behavioral of bch_core_iic
+# vsim -voptargs=+acc work.bch_core_iic 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.math_real(body)
+# Loading work.pkg_mgt_file(body)
+# Loading work.pkg_gen_heartbeat(body)
+# Loading work.bch_core_iic(behavioral)
+# Loading work.gen_heartbeat(rtl)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.core_iic_master(logic)
+# Loading work.pkg_task(body)
+# Loading work.model_eeprom_iic(arch)
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: Tugdual LE PELLETER  Hostname: WORKSTATION  ProcessID: 15028
+# 
+#           Attempting to use alternate WLF file "./wlftgkkb77".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlftgkkb77
+# 
+# ** Note: Using 7 Bit Addressing
+#    Time: 0 ps  Iteration: 0  Instance: /bch_core_iic/inst_model_eeprom_iic
+# ** Note: rpt_bch_core_iic_wrapper_zedboard_sim.txt proc_file_rpt_open success
+#    Time: 2501 ns  Iteration: 1  Instance: /bch_core_iic
+# ** Note: log_bch_core_iic_wrapper_zedboard_sim.csv proc_file_log_open success
+#    Time: 2503 ns  Iteration: 1  Instance: /bch_core_iic
+# ** Note: << 7 bit addressing & address is a0>>
+#    Time: 27465 ns  Iteration: 1  Instance: /bch_core_iic/inst_model_eeprom_iic
+# ** Note: << Slave Data Received on write is ff>>
+#    Time: 47385 ns  Iteration: 1  Instance: /bch_core_iic/inst_model_eeprom_iic
+# ** Note: << Slave Data Received on write is a5>>
+#    Time: 69795 ns  Iteration: 1  Instance: /bch_core_iic/inst_model_eeprom_iic
+# ** Note: << 7 bit addressing & address is a0>>
+#    Time: 102135 ns  Iteration: 1  Instance: /bch_core_iic/inst_model_eeprom_iic
+# ** Note: << Slave Data Received on write is 00>>
+#    Time: 122055 ns  Iteration: 1  Instance: /bch_core_iic/inst_model_eeprom_iic
+# ** Note: << Slave Data Received on write is 5a>>
+#    Time: 144465 ns  Iteration: 1  Instance: /bch_core_iic/inst_model_eeprom_iic
+# ** Note: << 7 bit addressing & address is a0>>
+#    Time: 176805 ns  Iteration: 1  Instance: /bch_core_iic/inst_model_eeprom_iic
+# ** Note: << Slave Data Received on write is ff>>
+#    Time: 196725 ns  Iteration: 1  Instance: /bch_core_iic/inst_model_eeprom_iic
+# ** Note: << 7 bit addressing & address is a1>>
+#    Time: 224115 ns  Iteration: 1  Instance: /bch_core_iic/inst_model_eeprom_iic
+# ** Note:  << Slave Data transmitted on read is a5>>
+#    Time: 245295 ns  Iteration: 1  Instance: /bch_core_iic/inst_model_eeprom_iic
+# ** Note: No ACK on a Data Read, returning to Idle 
+#    Time: 245295 ns  Iteration: 1  Instance: /bch_core_iic/inst_model_eeprom_iic
+# ** Note: << 7 bit addressing & address is a0>>
+#    Time: 276405 ns  Iteration: 1  Instance: /bch_core_iic/inst_model_eeprom_iic
+# ** Note: << Slave Data Received on write is 00>>
+#    Time: 296325 ns  Iteration: 1  Instance: /bch_core_iic/inst_model_eeprom_iic
+# ** Note: << 7 bit addressing & address is a1>>
+#    Time: 323715 ns  Iteration: 1  Instance: /bch_core_iic/inst_model_eeprom_iic
+# ** Note:  << Slave Data transmitted on read is 5a>>
+#    Time: 344865 ns  Iteration: 1  Instance: /bch_core_iic/inst_model_eeprom_iic
+# ** Note: No ACK on a Data Read, returning to Idle 
+#    Time: 344865 ns  Iteration: 1  Instance: /bch_core_iic/inst_model_eeprom_iic
+# ** Note: log_bch_core_iic_wrapper_zedboard_sim.csv proc_file_log_close success
+#    Time: 346674 ns  Iteration: 1  Instance: /bch_core_iic
+# ** Note: rpt_bch_core_iic_wrapper_zedboard_sim.txt proc_file_rpt_close success
+#    Time: 346677 ns  Iteration: 1  Instance: /bch_core_iic
+# ** Failure: end of simulation - success
+#    Time: 346679 ns  Iteration: 1  Process: /bch_core_iic/p_sim_end File: C:/Users/Tugdual LE PELLETER/Documents/Recherche/Repositories/core_iic/sources/bench/bch_core_iic.vhd
+# Break in Process p_sim_end at C:/Users/Tugdual LE PELLETER/Documents/Recherche/Repositories/core_iic/sources/bench/bch_core_iic.vhd line 943
+# Simulation Breakpoint: Break in Process p_sim_end at C:/Users/Tugdual LE PELLETER/Documents/Recherche/Repositories/core_iic/sources/bench/bch_core_iic.vhd line 943
+# MACRO ./run_modelsim.tcl PAUSED at line 54

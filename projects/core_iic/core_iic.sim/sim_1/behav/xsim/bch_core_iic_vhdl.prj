@@ -1,0 +1,12 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../../sources/package/pkg_mgt_file.vhd" \
+"../../../../../../sources/package/pkg_gen_heartbeat.vhd" \
+"../../../../../../sources/design/core_iic_master.vhd" \
+"../../../../../../sources/design/gen_heartbeat.vhd" \
+"../../../../../../sources/package/pkg_task.vhd" \
+"../../../../../../sources/bench/model_eeprom_iic.vhd" \
+"../../../../../../sources/bench/bch_core_iic.vhd" \
+
+# Do not sort compile order
+nosort

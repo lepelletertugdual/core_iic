@@ -1,0 +1,14 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Tugdual LE PELLETER/Documents/Recherche/Repositories/core_iic/sources/package/pkg_mgt_file.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Tugdual LE PELLETER/Documents/Recherche/Repositories/core_iic/sources/package/pkg_gen_heartbeat.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Tugdual LE PELLETER/Documents/Recherche/Repositories/core_iic/sources/design/core_iic_master.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'core_iic_master'
+WARNING: [VRFC 10-471] case choice must be a locally static expression [C:/Users/Tugdual LE PELLETER/Documents/Recherche/Repositories/core_iic/sources/design/core_iic_master.vhd:93]
+WARNING: [VRFC 10-471] case choice must be a locally static expression [C:/Users/Tugdual LE PELLETER/Documents/Recherche/Repositories/core_iic/sources/design/core_iic_master.vhd:96]
+WARNING: [VRFC 10-471] case choice must be a locally static expression [C:/Users/Tugdual LE PELLETER/Documents/Recherche/Repositories/core_iic/sources/design/core_iic_master.vhd:99]
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Tugdual LE PELLETER/Documents/Recherche/Repositories/core_iic/sources/design/gen_heartbeat.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'gen_heartbeat'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Tugdual LE PELLETER/Documents/Recherche/Repositories/core_iic/sources/package/pkg_task.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Tugdual LE PELLETER/Documents/Recherche/Repositories/core_iic/sources/bench/model_eeprom_iic.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'model_eeprom_iic'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Tugdual LE PELLETER/Documents/Recherche/Repositories/core_iic/sources/bench/bch_core_iic.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bch_core_iic'

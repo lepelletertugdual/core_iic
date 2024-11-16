@@ -1,0 +1,597 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Sat Nov 16 14:53:42 2024
+# Process ID: 896
+# Current directory: C:/Users/Tugdual LE PELLETER/Documents/Recherche/Repositories/core_iic/projects/core_iic
+# Command line: vivado.exe -mode tcl -source ./run_core_iic.tcl
+# Log file: C:/Users/Tugdual LE PELLETER/Documents/Recherche/Repositories/core_iic/projects/core_iic/vivado.log
+# Journal file: C:/Users/Tugdual LE PELLETER/Documents/Recherche/Repositories/core_iic/projects/core_iic\vivado.jou
+# Running On: WORKSTATION, OS: Windows, CPU Frequency: 2611 MHz, CPU Physical cores: 10, Host memory: 16794 MB
+#-----------------------------------------------------------
+source ./run_core_iic.tcl
+# set name_board     zedboard
+# set name_dut       core_iic
+# set name_project   ${name_dut}
+# set name_part      xc7z020clg484-3
+# set name_language  vhdl
+# set name_top_level ${name_dut}
+# set name_bench     bch_${name_dut}
+# create_project -force -name ${name_project}
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/Tugdual LE PELLETER/Documents/Recherche/Repositories/core_iic/projects/core_iic'
+create_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:11 . Memory (MB): peak = 395.910 ; gain = 68.824
+# add_files -fileset sources_1 {
+# 	        ./../../sources/package/pkg_gen_heartbeat.vhd
+# 			./../../sources/package/pkg_task.vhd
+#         }
+# add_files -fileset sources_1 {
+#             ./../../sources/design/gen_heartbeat.vhd
+# 			./../../sources/design/core_iic_master.vhd
+#         }
+# add_files -fileset sim_1 {
+#             ./../../sources/package/pkg_mgt_file.vhd
+# 	        ./../../sources/package/pkg_gen_heartbeat.vhd
+# 			./../../sources/package/pkg_task.vhd
+#         }
+# add_files -fileset sim_1 {
+#             ./../../sources/design/gen_heartbeat.vhd
+# 			./../../sources/design/core_iic_master.vhd
+#         }
+# add_files -fileset sim_1 {
+# 		    ./../../sources/bench/model_eeprom_iic.vhd
+#             ./../../sources/bench/bch_core_iic.vhd
+#         }
+# set_property top ${name_bench} [get_filesets sim_1]
+# update_compile_order -fileset sources_1
+# update_compile_order -fileset sim_1
+# set_property target_language ${name_language} [current_project]
+# set_property part            ${name_part}     [current_project]
+# synth_design -directive        PerformanceOptimized \
+# 			 -fsm_extraction   one_hot              \
+# 			 -resource_sharing off                  \
+# 			 -incremental_mode aggressive           \
+# 			 -retiming                              \
+# 			 -debug_log                             \
+# 			 -verbose
+Command: synth_design -directive PerformanceOptimized -fsm_extraction one_hot -resource_sharing off -incremental_mode aggressive -retiming -debug_log -verbose
+Starting synth_design
+Using part: xc7z020clg484-3
+Top: core_iic_master
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Designutils 20-5008] Incremental synthesis strategy aggressive
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 7712
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Applications/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 838.020 ; gain = 410.316
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'core_iic_master' [C:/Users/Tugdual LE PELLETER/Documents/Recherche/Repositories/core_iic/sources/design/core_iic_master.vhd:61]
+	Module core_iic_master : Parameter input_clk bound to: 50000000 - type: integer 
+	Module core_iic_master : Parameter bus_clk bound to: 400000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'core_iic_master' (0#1) [C:/Users/Tugdual LE PELLETER/Documents/Recherche/Repositories/core_iic/sources/design/core_iic_master.vhd:61]
+INFO: [Synth 8-7261] Parallel RTL Optimization Phase 1 criteria is not met
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 929.598 ; gain = 501.895
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 929.598 ; gain = 501.895
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-3
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 929.598 ; gain = 501.895
+INFO: [Device 21-403] Loading part xc7z020clg484-3
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'core_iic_master'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                   ready |                        000000001 |                             0000
+                   start |                        000000010 |                             0001
+                 command |                        000000100 |                             0010
+                slv_ack1 |                        000001000 |                             0011
+                      wr |                        000010000 |                             0100
+                slv_ack2 |                        000100000 |                             0110
+                      rd |                        001000000 |                             0101
+                mstr_ack |                        010000000 |                             0111
+                    stop |                        100000000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'core_iic_master'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 929.598 ; gain = 501.895
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    7 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 1     
+	   2 Input    3 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 4     
+	                7 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 9     
++---Muxes : 
+	   9 Input    9 Bit        Muxes := 1     
+	   2 Input    9 Bit        Muxes := 9     
+	   6 Input    8 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 3     
+	   2 Input    3 Bit        Muxes := 1     
+	   4 Input    1 Bit        Muxes := 3     
+	   2 Input    1 Bit        Muxes := 5     
+	   3 Input    1 Bit        Muxes := 1     
+	   9 Input    1 Bit        Muxes := 8     
+	   6 Input    1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component detection 
+Module core_iic_master 
+File: C:/Users/Tugdual LE PELLETER/Documents/Recherche/Repositories/core_iic/sources/design/core_iic_master.vhd 
+Found Comparator "data_clk_prev2" of operand size {<const>, 1 Bit} at Line:82
+Found Register "scl_clk_reg" of size 1-bit
+Found Comparator "scl_ena2" of operand size {<const>, 1 Bit} at Line:223
+Found Comparator "done2" of operand size {<const>, 1 Bit} at Line:127
+Found Register "scl_ena_reg" of size 1-bit
+Found Comparator "scl2" of operand size {<const>, 1 Bit} at Line:256
+Found Register "stretch_reg" of size 1-bit
+Found Register "count_reg" of size 7-bit
+Found Adder "count0" of operand size {1 Bit, 7 Bit} at Line:90
+Found Register "data_clk_reg" of size 1-bit
+Found Register "data_clk_prev_reg" of size 1-bit
+Found Register "sda_int_reg" of size 1-bit
+Found Adder "bit_cnt0" of operand size {<const>, 3 Bit} at Line:149
+Found Register "bit_cnt_reg" of size 3-bit
+Found Register "addr_rw_reg" of size 8-bit
+Found Adder "sda_int1" of operand size {<const>, 3 Bit} at Line:150
+Found Register "data_tx_reg" of size 8-bit
+Found Comparator "eqOp" of operand size {8 Bit, 8 Bit} at Line:176
+Found Register "ack_error_reg" of size 1-bit
+Found Comparator "ack_error1" of operand size {<const>, 1 Bit} at Line:231
+Found Register "busy_reg" of size 1-bit
+Found Register "done_reg" of size 1-bit
+Found Register "data_rx_reg" of size 8-bit
+Found Register "data_rd_reg" of size 8-bit
+Hierarchical RTL Component report 
+Module core_iic_master 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    7 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 1     
+	   2 Input    3 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 4     
+	                7 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 9     
++---Muxes : 
+	   9 Input    9 Bit        Muxes := 1     
+	   2 Input    9 Bit        Muxes := 9     
+	   6 Input    8 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 3     
+	   2 Input    3 Bit        Muxes := 1     
+	   4 Input    1 Bit        Muxes := 3     
+	   2 Input    1 Bit        Muxes := 5     
+	   3 Input    1 Bit        Muxes := 1     
+	   9 Input    1 Bit        Muxes := 8     
+	   6 Input    1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:31 . Memory (MB): peak = 1147.766 ; gain = 720.062
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:31 . Memory (MB): peak = 1147.766 ; gain = 720.062
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-11322] No global retiming is needed without any clock constraint
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:08 ; elapsed = 00:00:31 . Memory (MB): peak = 1147.766 ; gain = 720.062
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:09 ; elapsed = 00:00:35 . Memory (MB): peak = 1147.766 ; gain = 720.062
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:09 ; elapsed = 00:00:35 . Memory (MB): peak = 1147.766 ; gain = 720.062
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:09 ; elapsed = 00:00:35 . Memory (MB): peak = 1147.766 ; gain = 720.062
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:09 ; elapsed = 00:00:35 . Memory (MB): peak = 1147.766 ; gain = 720.062
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:35 . Memory (MB): peak = 1147.766 ; gain = 720.062
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:09 ; elapsed = 00:00:35 . Memory (MB): peak = 1147.766 ; gain = 720.062
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------+------+
+|      |Cell  |Count |
++------+------+------+
+|1     |BUFG  |     1|
+|2     |LUT1  |     2|
+|3     |LUT2  |     8|
+|4     |LUT3  |    21|
+|5     |LUT4  |     7|
+|6     |LUT5  |    15|
+|7     |LUT6  |    39|
+|8     |MUXF7 |     3|
+|9     |FDCE  |    26|
+|10    |FDPE  |     6|
+|11    |FDRE  |    28|
+|12    |IBUF  |    19|
+|13    |OBUF  |    13|
++------+------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |   188|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:09 ; elapsed = 00:00:35 . Memory (MB): peak = 1147.766 ; gain = 720.062
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:35 . Memory (MB): peak = 1147.766 ; gain = 720.062
+Synthesis Optimization Complete : Time (s): cpu = 00:00:09 ; elapsed = 00:00:35 . Memory (MB): peak = 1147.766 ; gain = 720.062
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1157.598 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1253.438 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 45cbad73
+INFO: [Common 17-83] Releasing license: Synthesis
+20 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:39 . Memory (MB): peak = 1253.438 ; gain = 832.672
+# start_gui
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+CRITICAL WARNING: [IP_Flow 19-2342] No Vivado IP repository was found; no Vivado IP have been loaded into the IP Catalog.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Applications/Xilinx/Vivado/2022.2/data/ip'.
+WARNING: [Board 49-91] Board repository path 'C:/Users/Tugdual' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'C:/Windows/System32/LE' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'C:/Windows/System32/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/LE' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'C:/Windows/System32/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/LE' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'C:/Windows/System32/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/LE' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'C:/Windows/System32/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/LE' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'C:/Windows/System32/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/LE' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'C:/Windows/System32/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart/LE' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'C:/Windows/System32/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/LE' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'C:/Windows/System32/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/LE' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'C:/Windows/System32/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/sfir_filter_tap_4_8b/projects/sfir_filter_tap_4_8b/LE' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'C:/Windows/System32/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/sfir_filter_tap_4_8b/projects/sfir_filter_tap_4_8b/PELLETER/Documents/Recherche/Repositories/sfir_filter_tap_4_8b/projects/sfir_filter_tap_4_8b/LE' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'C:/Windows/System32/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/sfir_filter_tap_4_8b/projects/sfir_filter_tap_4_8b/PELLETER/Documents/Recherche/Repositories/sfir_filter_tap_4_8b/projects/sfir_filter_tap_4_8b/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/LE' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'C:/Windows/System32/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/sfir_filter_tap_4_8b/projects/sfir_filter_tap_4_8b/PELLETER/Documents/Recherche/Repositories/sfir_filter_tap_4_8b/projects/sfir_filter_tap_4_8b/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/LE' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'C:/Windows/System32/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/sfir_filter_tap_4_8b/projects/sfir_filter_tap_4_8b/PELLETER/Documents/Recherche/Repositories/sfir_filter_tap_4_8b/projects/sfir_filter_tap_4_8b/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/LE' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'C:/Windows/System32/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/sfir_filter_tap_4_8b/projects/sfir_filter_tap_4_8b/PELLETER/Documents/Recherche/Repositories/sfir_filter_tap_4_8b/projects/sfir_filter_tap_4_8b/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/LE' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'C:/Windows/System32/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/sfir_filter_tap_4_8b/projects/sfir_filter_tap_4_8b/PELLETER/Documents/Recherche/Repositories/sfir_filter_tap_4_8b/projects/sfir_filter_tap_4_8b/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/LE' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'C:/Windows/System32/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/sfir_filter_tap_4_8b/projects/sfir_filter_tap_4_8b/PELLETER/Documents/Recherche/Repositories/sfir_filter_tap_4_8b/projects/sfir_filter_tap_4_8b/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/LE' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'C:/Windows/System32/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/sfir_filter_tap_4_8b/projects/sfir_filter_tap_4_8b/PELLETER/Documents/Recherche/Repositories/sfir_filter_tap_4_8b/projects/sfir_filter_tap_4_8b/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/LE' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'C:/Windows/System32/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/sfir_filter_tap_4_8b/projects/sfir_filter_tap_4_8b/PELLETER/Documents/Recherche/Repositories/sfir_filter_tap_4_8b/projects/sfir_filter_tap_4_8b/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/LE' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'C:/Windows/System32/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/sfir_filter_tap_4_8b/projects/sfir_filter_tap_4_8b/PELLETER/Documents/Recherche/Repositories/sfir_filter_tap_4_8b/projects/sfir_filter_tap_4_8b/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/LE' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'C:/Windows/System32/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/sfir_filter_tap_4_8b/projects/sfir_filter_tap_4_8b/PELLETER/Documents/Recherche/Repositories/sfir_filter_tap_4_8b/projects/sfir_filter_tap_4_8b/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/LE' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'C:/Windows/System32/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/sfir_filter_tap_4_8b/projects/sfir_filter_tap_4_8b/PELLETER/Documents/Recherche/Repositories/sfir_filter_tap_4_8b/projects/sfir_filter_tap_4_8b/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/LE' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'C:/Windows/System32/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/sfir_filter_tap_4_8b/projects/sfir_filter_tap_4_8b/PELLETER/Documents/Recherche/Repositories/sfir_filter_tap_4_8b/projects/sfir_filter_tap_4_8b/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/AppData/Roaming/Xilinx/Vivado/LE' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'C:/Windows/System32/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/sfir_filter_tap_4_8b/projects/sfir_filter_tap_4_8b/PELLETER/Documents/Recherche/Repositories/sfir_filter_tap_4_8b/projects/sfir_filter_tap_4_8b/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/AppData/Roaming/Xilinx/Vivado/PELLETER/AppData/Roaming/Xilinx/Vivado/LE' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'C:/Windows/System32/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/sfir_filter_tap_4_8b/projects/sfir_filter_tap_4_8b/PELLETER/Documents/Recherche/Repositories/sfir_filter_tap_4_8b/projects/sfir_filter_tap_4_8b/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/AppData/Roaming/Xilinx/Vivado/PELLETER/AppData/Roaming/Xilinx/Vivado/PELLETER/AppData/Roaming/Xilinx/Vivado/LE' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'C:/Windows/System32/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/sfir_filter_tap_4_8b/projects/sfir_filter_tap_4_8b/PELLETER/Documents/Recherche/Repositories/sfir_filter_tap_4_8b/projects/sfir_filter_tap_4_8b/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/AppData/Roaming/Xilinx/Vivado/PELLETER/AppData/Roaming/Xilinx/Vivado/PELLETER/AppData/Roaming/Xilinx/Vivado/PELLETER/AppData/Roaming/Xilinx/Vivado/LE' does not exist, it will not be used to search board files.
+WARNING: [Board 49-91] Board repository path 'C:/Windows/System32/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/core_uart/project/core_uart_wrapper_zedboard/PELLETER/Documents/Recherche/Repositories/sfir_filter_tap_4_8b/projects/sfir_filter_tap_4_8b/PELLETER/Documents/Recherche/Repositories/sfir_filter_tap_4_8b/projects/sfir_filter_tap_4_8b/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/Documents/Recherche/Repositories/chenillard/projects/chenillard/PELLETER/AppData/Roaming/Xilinx/Vivado/PELLETER/AppData/Roaming/Xilinx/Vivado/PELLETER/AppData/Roaming/Xilinx/Vivado/PELLETER/AppData/Roaming/Xilinx/Vivado/PELLETER/AppData/Roaming/Xilinx/Vivado/2022.2/xhub/board_store/xilinx_board_store' does not exist, it will not be used to search board files.
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.6 available at C:/Applications/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kc705/1.6/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at C:/Applications/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.6/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at C:/Applications/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.7/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu1500:part0:1.2 available at C:/Applications/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu1500/1.2/board.xml as part xcku115-flvb2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.4 available at C:/Applications/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc707/1.4/board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc709:part0:1.8 available at C:/Applications/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc709/1.8/board.xml as part xc7vx690tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at C:/Applications/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/2.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.0 available at C:/Applications/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.1 available at C:/Applications/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.1/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.0 available at C:/Applications/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at C:/Applications/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.6/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at C:/Applications/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.7/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at C:/Applications/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu110/1.4/board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at C:/Applications/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.0/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.3 available at C:/Applications/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.3/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.4 available at C:/Applications/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.4/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128:part0:1.0 available at C:/Applications/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu128/production/1.0/board.xml as part xcvu37p-fsvh2892-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at C:/Applications/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu129/production/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu1525:part0:1.3 available at C:/Applications/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu1525/1.3/board.xml as part xcvu9p-fsgd2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at C:/Applications/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_mpsoc:part0:1.0 available at C:/Applications/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_mpsoc/1.0/board.xml as part xczu19eg-ffvd1760-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_rfsoc:part0:1.0 available at C:/Applications/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_rfsoc/1.0/board.xml as part xczu21dr-ffvd1156-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at C:/Applications/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.2 available at C:/Applications/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/2.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.0 available at C:/Applications/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.1 available at C:/Applications/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.1/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.0 available at C:/Applications/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180_newl/production/1.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.0 available at C:/Applications/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at C:/Applications/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at C:/Applications/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180_es:part0:1.0 available at C:/Applications/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/es/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.4 available at C:/Applications/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zc706/1.4/board.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.3 available at C:/Applications/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.3/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.4 available at C:/Applications/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.4/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.2 available at C:/Applications/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.2/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.3 available at C:/Applications/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.3/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.4 available at C:/Applications/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.4/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1275:part0:1.0 available at C:/Applications/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1275/1.0/board.xml as part xczu29dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1285:part0:1.0 available at C:/Applications/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1285/1.0/board.xml as part xczu39dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208:part0:2.0 available at C:/Applications/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/production/2.0/board.xml as part xczu48dr-fsvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at C:/Applications/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 available at C:/Applications/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/production/2.0/board.xml as part xczu49dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at C:/Applications/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at C:/Applications/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at C:/Applications/Xilinx/Vivado/2022.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'bch_core_iic'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Tugdual LE PELLETER/Documents/Recherche/Repositories/core_iic/projects/core_iic/core_iic.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Applications/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'bch_core_iic' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Tugdual LE PELLETER/Documents/Recherche/Repositories/core_iic/projects/core_iic/core_iic.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj bch_core_iic_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Tugdual LE PELLETER/Documents/Recherche/Repositories/core_iic/sources/package/pkg_mgt_file.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Tugdual LE PELLETER/Documents/Recherche/Repositories/core_iic/sources/package/pkg_gen_heartbeat.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Tugdual LE PELLETER/Documents/Recherche/Repositories/core_iic/sources/design/core_iic_master.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'core_iic_master'
+WARNING: [VRFC 10-471] case choice must be a locally static expression [C:/Users/Tugdual LE PELLETER/Documents/Recherche/Repositories/core_iic/sources/design/core_iic_master.vhd:93]
+WARNING: [VRFC 10-471] case choice must be a locally static expression [C:/Users/Tugdual LE PELLETER/Documents/Recherche/Repositories/core_iic/sources/design/core_iic_master.vhd:96]
+WARNING: [VRFC 10-471] case choice must be a locally static expression [C:/Users/Tugdual LE PELLETER/Documents/Recherche/Repositories/core_iic/sources/design/core_iic_master.vhd:99]
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Tugdual LE PELLETER/Documents/Recherche/Repositories/core_iic/sources/design/gen_heartbeat.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'gen_heartbeat'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Tugdual LE PELLETER/Documents/Recherche/Repositories/core_iic/sources/package/pkg_task.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Tugdual LE PELLETER/Documents/Recherche/Repositories/core_iic/sources/bench/model_eeprom_iic.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'model_eeprom_iic'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Tugdual LE PELLETER/Documents/Recherche/Repositories/core_iic/sources/bench/bch_core_iic.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bch_core_iic'
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Tugdual LE PELLETER/Documents/Recherche/Repositories/core_iic/projects/core_iic/core_iic.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot bch_core_iic_behav xil_defaultlib.bch_core_iic -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Applications/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot bch_core_iic_behav xil_defaultlib.bch_core_iic -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.math_real
+Compiling package xil_defaultlib.pkg_mgt_file
+Compiling package xil_defaultlib.pkg_gen_heartbeat
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package xil_defaultlib.pkg_task
+Compiling architecture rtl of entity xil_defaultlib.gen_heartbeat [gen_heartbeat_default]
+Compiling architecture logic of entity xil_defaultlib.core_iic_master [\core_iic_master(input_clk=10000...]
+Compiling architecture arch of entity xil_defaultlib.model_eeprom_iic [model_eeprom_iic_default]
+Compiling architecture behavioral of entity xil_defaultlib.bch_core_iic
+Built simulation snapshot bch_core_iic_behav
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:14 . Memory (MB): peak = 2066.184 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '13' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Tugdual LE PELLETER/Documents/Recherche/Repositories/core_iic/projects/core_iic/core_iic.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "bch_core_iic_behav -key {Behavioral:sim_1:Functional:bch_core_iic} -tclbatch {bch_core_iic.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source bch_core_iic.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+WARNING: Simulation object /bch_core_iic/f_file_log was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+WARNING: Simulation object /bch_core_iic/f_file_rpt was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+# run 1000ns
+Note: Using 7 Bit Addressing
+Time: 0 ps  Iteration: 0  Process: /bch_core_iic/inst_model_eeprom_iic/initial  File: C:/Users/Tugdual LE PELLETER/Documents/Recherche/Repositories/core_iic/sources/bench/model_eeprom_iic.vhd
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'bch_core_iic_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:21 . Memory (MB): peak = 2126.539 ; gain = 385.891
+current_wave_config {Untitled 1}
+Untitled 1
+add_wave {{/bch_core_iic}} 
+WARNING: Simulation object /bch_core_iic/f_file_log was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+WARNING: Simulation object /bch_core_iic/f_file_rpt was not traceable in the design for the following reason:
+Vivado Simulator does not yet support tracing of VHDL variables.
+current_wave_config {Untitled 1}
+Untitled 1
+add_wave {{/bch_core_iic/inst_gen_heartbeat}} 
+current_wave_config {Untitled 1}
+Untitled 1
+add_wave {{/bch_core_iic/inst_core_iic_master}} 
+current_wave_config {Untitled 1}
+Untitled 1
+add_wave {{/bch_core_iic/inst_model_eeprom_iic}} 
+save_wave_config {C:/Users/Tugdual LE PELLETER/Documents/Recherche/Repositories/core_iic/projects/core_iic/bch_core_iic_behav.wcfg}
+add_files -fileset sim_1 -norecurse {{C:/Users/Tugdual LE PELLETER/Documents/Recherche/Repositories/core_iic/projects/core_iic/bch_core_iic_behav.wcfg}}
+set_property xsim.view {{C:/Users/Tugdual LE PELLETER/Documents/Recherche/Repositories/core_iic/projects/core_iic/bch_core_iic_behav.wcfg}} [get_filesets sim_1]
+restart
+INFO: [Wavedata 42-604] Simulation restarted
+run all
+Note: Using 7 Bit Addressing
+Time: 0 ps  Iteration: 0  Process: /bch_core_iic/inst_model_eeprom_iic/initial  File: C:/Users/Tugdual LE PELLETER/Documents/Recherche/Repositories/core_iic/sources/bench/model_eeprom_iic.vhd
+Note: rpt_bch_core_iic_wrapper_zedboard_sim.txt proc_file_rpt_open success
+Time: 2501 ns  Iteration: 1  Process: /bch_core_iic/p_fsm_file_mgt_rpt  File: C:/Users/Tugdual LE PELLETER/Documents/Recherche/Repositories/core_iic/sources/bench/bch_core_iic.vhd
+Note: log_bch_core_iic_wrapper_zedboard_sim.csv proc_file_log_open success
+Time: 2503 ns  Iteration: 1  Process: /bch_core_iic/p_fsm_file_mgt_log  File: C:/Users/Tugdual LE PELLETER/Documents/Recherche/Repositories/core_iic/sources/bench/bch_core_iic.vhd
+Note: << 7 bit addressing & address is a0>>
+Time: 27465 ns  Iteration: 1  Process: /bch_core_iic/inst_model_eeprom_iic/line__421  File: C:/Users/Tugdual LE PELLETER/Documents/Recherche/Repositories/core_iic/sources/bench/model_eeprom_iic.vhd
+Note: << Slave Data Received on write is ff>>
+Time: 47385 ns  Iteration: 1  Process: /bch_core_iic/inst_model_eeprom_iic/line__421  File: C:/Users/Tugdual LE PELLETER/Documents/Recherche/Repositories/core_iic/sources/bench/model_eeprom_iic.vhd
+Note: << Slave Data Received on write is a5>>
+Time: 69795 ns  Iteration: 1  Process: /bch_core_iic/inst_model_eeprom_iic/line__421  File: C:/Users/Tugdual LE PELLETER/Documents/Recherche/Repositories/core_iic/sources/bench/model_eeprom_iic.vhd
+Note: << 7 bit addressing & address is a0>>
+Time: 102135 ns  Iteration: 1  Process: /bch_core_iic/inst_model_eeprom_iic/line__421  File: C:/Users/Tugdual LE PELLETER/Documents/Recherche/Repositories/core_iic/sources/bench/model_eeprom_iic.vhd
+Note: << Slave Data Received on write is 00>>
+Time: 122055 ns  Iteration: 1  Process: /bch_core_iic/inst_model_eeprom_iic/line__421  File: C:/Users/Tugdual LE PELLETER/Documents/Recherche/Repositories/core_iic/sources/bench/model_eeprom_iic.vhd
+Note: << Slave Data Received on write is 5a>>
+Time: 144465 ns  Iteration: 1  Process: /bch_core_iic/inst_model_eeprom_iic/line__421  File: C:/Users/Tugdual LE PELLETER/Documents/Recherche/Repositories/core_iic/sources/bench/model_eeprom_iic.vhd
+Note: << 7 bit addressing & address is a0>>
+Time: 176805 ns  Iteration: 1  Process: /bch_core_iic/inst_model_eeprom_iic/line__421  File: C:/Users/Tugdual LE PELLETER/Documents/Recherche/Repositories/core_iic/sources/bench/model_eeprom_iic.vhd
+Note: << Slave Data Received on write is ff>>
+Time: 196725 ns  Iteration: 1  Process: /bch_core_iic/inst_model_eeprom_iic/line__421  File: C:/Users/Tugdual LE PELLETER/Documents/Recherche/Repositories/core_iic/sources/bench/model_eeprom_iic.vhd
+Note: << 7 bit addressing & address is a1>>
+Time: 224115 ns  Iteration: 1  Process: /bch_core_iic/inst_model_eeprom_iic/line__421  File: C:/Users/Tugdual LE PELLETER/Documents/Recherche/Repositories/core_iic/sources/bench/model_eeprom_iic.vhd
+Note:  << Slave Data transmitted on read is a5>>
+Time: 245295 ns  Iteration: 1  Process: /bch_core_iic/inst_model_eeprom_iic/line__421  File: C:/Users/Tugdual LE PELLETER/Documents/Recherche/Repositories/core_iic/sources/bench/model_eeprom_iic.vhd
+Note: No ACK on a Data Read, returning to Idle 
+Time: 245295 ns  Iteration: 1  Process: /bch_core_iic/inst_model_eeprom_iic/line__421  File: C:/Users/Tugdual LE PELLETER/Documents/Recherche/Repositories/core_iic/sources/bench/model_eeprom_iic.vhd
+Note: << 7 bit addressing & address is a0>>
+Time: 276405 ns  Iteration: 1  Process: /bch_core_iic/inst_model_eeprom_iic/line__421  File: C:/Users/Tugdual LE PELLETER/Documents/Recherche/Repositories/core_iic/sources/bench/model_eeprom_iic.vhd
+Note: << Slave Data Received on write is 00>>
+Time: 296325 ns  Iteration: 1  Process: /bch_core_iic/inst_model_eeprom_iic/line__421  File: C:/Users/Tugdual LE PELLETER/Documents/Recherche/Repositories/core_iic/sources/bench/model_eeprom_iic.vhd
+Note: << 7 bit addressing & address is a1>>
+Time: 323715 ns  Iteration: 1  Process: /bch_core_iic/inst_model_eeprom_iic/line__421  File: C:/Users/Tugdual LE PELLETER/Documents/Recherche/Repositories/core_iic/sources/bench/model_eeprom_iic.vhd
+Note:  << Slave Data transmitted on read is 5a>>
+Time: 344865 ns  Iteration: 1  Process: /bch_core_iic/inst_model_eeprom_iic/line__421  File: C:/Users/Tugdual LE PELLETER/Documents/Recherche/Repositories/core_iic/sources/bench/model_eeprom_iic.vhd
+Note: No ACK on a Data Read, returning to Idle 
+Time: 344865 ns  Iteration: 1  Process: /bch_core_iic/inst_model_eeprom_iic/line__421  File: C:/Users/Tugdual LE PELLETER/Documents/Recherche/Repositories/core_iic/sources/bench/model_eeprom_iic.vhd
+Note: log_bch_core_iic_wrapper_zedboard_sim.csv proc_file_log_close success
+Time: 346674 ns  Iteration: 1  Process: /bch_core_iic/p_fsm_file_mgt_log  File: C:/Users/Tugdual LE PELLETER/Documents/Recherche/Repositories/core_iic/sources/bench/bch_core_iic.vhd
+Note: rpt_bch_core_iic_wrapper_zedboard_sim.txt proc_file_rpt_close success
+Time: 346677 ns  Iteration: 1  Process: /bch_core_iic/p_fsm_file_mgt_rpt  File: C:/Users/Tugdual LE PELLETER/Documents/Recherche/Repositories/core_iic/sources/bench/bch_core_iic.vhd
+Failure: end of simulation - success
+Time: 346679 ns  Iteration: 1  Process: /bch_core_iic/p_sim_end  File: C:/Users/Tugdual LE PELLETER/Documents/Recherche/Repositories/core_iic/sources/bench/bch_core_iic.vhd
+$finish called at time : 346679 ns : File "C:/Users/Tugdual LE PELLETER/Documents/Recherche/Repositories/core_iic/sources/bench/bch_core_iic.vhd" Line 940
+run: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2290.754 ; gain = 138.148

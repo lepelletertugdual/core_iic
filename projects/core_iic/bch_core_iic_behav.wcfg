@@ -1,0 +1,725 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="bch_core_iic_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="bch_core_iic" />
+            <top_module name="pkg_gen_heartbeat" />
+            <top_module name="pkg_mgt_file" />
+            <top_module name="pkg_task" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="1,000,000 ps"></ZoomStartTime>
+      <ZoomEndTime time="1,000,003 ps"></ZoomEndTime>
+      <Cursor1Time time="1,000,000 ps"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="351"></NameColumnWidth>
+      <ValueColumnWidth column_width="171"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="4" />
+   <wvobject fp_name="group155" type="group">
+      <obj_property name="label">bch_core_iic</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/bch_core_iic/s_fsm_main_state" type="other">
+         <obj_property name="ElementShortName">s_fsm_main_state</obj_property>
+         <obj_property name="ObjectShortName">s_fsm_main_state</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/s_fsm_init_state" type="other">
+         <obj_property name="ElementShortName">s_fsm_init_state</obj_property>
+         <obj_property name="ObjectShortName">s_fsm_init_state</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/s_fsm_test_state" type="other">
+         <obj_property name="ElementShortName">s_fsm_test_state</obj_property>
+         <obj_property name="ObjectShortName">s_fsm_test_state</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/s_fsm_file_mgt_log" type="other">
+         <obj_property name="ElementShortName">s_fsm_file_mgt_log</obj_property>
+         <obj_property name="ObjectShortName">s_fsm_file_mgt_log</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/s_fsm_file_mgt_rpt" type="other">
+         <obj_property name="ElementShortName">s_fsm_file_mgt_rpt</obj_property>
+         <obj_property name="ObjectShortName">s_fsm_file_mgt_rpt</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/s_sim_file_req_log_open" type="logic">
+         <obj_property name="ElementShortName">s_sim_file_req_log_open</obj_property>
+         <obj_property name="ObjectShortName">s_sim_file_req_log_open</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/s_sim_file_ack_log_open" type="logic">
+         <obj_property name="ElementShortName">s_sim_file_ack_log_open</obj_property>
+         <obj_property name="ObjectShortName">s_sim_file_ack_log_open</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/s_sim_file_req_log_close" type="logic">
+         <obj_property name="ElementShortName">s_sim_file_req_log_close</obj_property>
+         <obj_property name="ObjectShortName">s_sim_file_req_log_close</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/s_sim_file_ack_log_close" type="logic">
+         <obj_property name="ElementShortName">s_sim_file_ack_log_close</obj_property>
+         <obj_property name="ObjectShortName">s_sim_file_ack_log_close</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/s_sim_file_req_rpt_open" type="logic">
+         <obj_property name="ElementShortName">s_sim_file_req_rpt_open</obj_property>
+         <obj_property name="ObjectShortName">s_sim_file_req_rpt_open</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/s_sim_file_ack_rpt_open" type="logic">
+         <obj_property name="ElementShortName">s_sim_file_ack_rpt_open</obj_property>
+         <obj_property name="ObjectShortName">s_sim_file_ack_rpt_open</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/s_sim_file_req_rpt_close" type="logic">
+         <obj_property name="ElementShortName">s_sim_file_req_rpt_close</obj_property>
+         <obj_property name="ObjectShortName">s_sim_file_req_rpt_close</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/s_sim_file_ack_rpt_close" type="logic">
+         <obj_property name="ElementShortName">s_sim_file_ack_rpt_close</obj_property>
+         <obj_property name="ObjectShortName">s_sim_file_ack_rpt_close</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/s_sim_clk" type="logic">
+         <obj_property name="ElementShortName">s_sim_clk</obj_property>
+         <obj_property name="ObjectShortName">s_sim_clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/s_osc" type="logic">
+         <obj_property name="ElementShortName">s_osc</obj_property>
+         <obj_property name="ObjectShortName">s_osc</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/s_sim_rst" type="logic">
+         <obj_property name="ElementShortName">s_sim_rst</obj_property>
+         <obj_property name="ObjectShortName">s_sim_rst</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/s_sim_cnt" type="other">
+         <obj_property name="ElementShortName">s_sim_cnt</obj_property>
+         <obj_property name="ObjectShortName">s_sim_cnt</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/s_sim_done" type="logic">
+         <obj_property name="ElementShortName">s_sim_done</obj_property>
+         <obj_property name="ObjectShortName">s_sim_done</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/s_sim_init_req" type="logic">
+         <obj_property name="ElementShortName">s_sim_init_req</obj_property>
+         <obj_property name="ObjectShortName">s_sim_init_req</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/s_sim_init_ack" type="logic">
+         <obj_property name="ElementShortName">s_sim_init_ack</obj_property>
+         <obj_property name="ObjectShortName">s_sim_init_ack</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/s_sim_test_req" type="logic">
+         <obj_property name="ElementShortName">s_sim_test_req</obj_property>
+         <obj_property name="ObjectShortName">s_sim_test_req</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/s_sim_test_ack" type="logic">
+         <obj_property name="ElementShortName">s_sim_test_ack</obj_property>
+         <obj_property name="ObjectShortName">s_sim_test_ack</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/s_sim_test_status" type="other">
+         <obj_property name="ElementShortName">s_sim_test_status</obj_property>
+         <obj_property name="ObjectShortName">s_sim_test_status</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/s_error" type="logic">
+         <obj_property name="ElementShortName">s_error</obj_property>
+         <obj_property name="ObjectShortName">s_error</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/s_error_data" type="logic">
+         <obj_property name="ElementShortName">s_error_data</obj_property>
+         <obj_property name="ObjectShortName">s_error_data</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/s_cnt_tmp" type="other">
+         <obj_property name="ElementShortName">s_cnt_tmp</obj_property>
+         <obj_property name="ObjectShortName">s_cnt_tmp</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/s_dut_o_alive" type="logic">
+         <obj_property name="ElementShortName">s_dut_o_alive</obj_property>
+         <obj_property name="ObjectShortName">s_dut_o_alive</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/s_dut_o_error" type="array">
+         <obj_property name="ElementShortName">s_dut_o_error[7:0]</obj_property>
+         <obj_property name="ObjectShortName">s_dut_o_error[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/s_dut_i_clk" type="logic">
+         <obj_property name="ElementShortName">s_dut_i_clk</obj_property>
+         <obj_property name="ObjectShortName">s_dut_i_clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/s_dut_i_rst" type="logic">
+         <obj_property name="ElementShortName">s_dut_i_rst</obj_property>
+         <obj_property name="ObjectShortName">s_dut_i_rst</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/s_dut_i_rst_n" type="logic">
+         <obj_property name="ElementShortName">s_dut_i_rst_n</obj_property>
+         <obj_property name="ObjectShortName">s_dut_i_rst_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/s_dut_i_ena" type="logic">
+         <obj_property name="ElementShortName">s_dut_i_ena</obj_property>
+         <obj_property name="ObjectShortName">s_dut_i_ena</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/s_dut_i_ena_reg" type="array">
+         <obj_property name="ElementShortName">s_dut_i_ena_reg[2499:0]</obj_property>
+         <obj_property name="ObjectShortName">s_dut_i_ena_reg[2499:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/s_dut_i_ena_reg_gen_tmp" type="array">
+         <obj_property name="ElementShortName">s_dut_i_ena_reg_gen_tmp[2499:0]</obj_property>
+         <obj_property name="ObjectShortName">s_dut_i_ena_reg_gen_tmp[2499:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/s_dut_i_ena_reg_gen" type="logic">
+         <obj_property name="ElementShortName">s_dut_i_ena_reg_gen</obj_property>
+         <obj_property name="ObjectShortName">s_dut_i_ena_reg_gen</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/s_dut_i_addr" type="array">
+         <obj_property name="ElementShortName">s_dut_i_addr[6:0]</obj_property>
+         <obj_property name="ObjectShortName">s_dut_i_addr[6:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/s_dut_i_rw" type="logic">
+         <obj_property name="ElementShortName">s_dut_i_rw</obj_property>
+         <obj_property name="ObjectShortName">s_dut_i_rw</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/s_dut_i_rw_reg" type="array">
+         <obj_property name="ElementShortName">s_dut_i_rw_reg[2499:0]</obj_property>
+         <obj_property name="ObjectShortName">s_dut_i_rw_reg[2499:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/s_dut_i_rw_reg_gen_tmp" type="array">
+         <obj_property name="ElementShortName">s_dut_i_rw_reg_gen_tmp[2499:0]</obj_property>
+         <obj_property name="ObjectShortName">s_dut_i_rw_reg_gen_tmp[2499:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/s_dut_i_rw_reg_gen" type="logic">
+         <obj_property name="ElementShortName">s_dut_i_rw_reg_gen</obj_property>
+         <obj_property name="ObjectShortName">s_dut_i_rw_reg_gen</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/s_dut_i_data_wr" type="array">
+         <obj_property name="ElementShortName">s_dut_i_data_wr[7:0]</obj_property>
+         <obj_property name="ObjectShortName">s_dut_i_data_wr[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/s_dut_o_data_rd" type="array">
+         <obj_property name="ElementShortName">s_dut_o_data_rd[7:0]</obj_property>
+         <obj_property name="ObjectShortName">s_dut_o_data_rd[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/s_dut_o_busy" type="logic">
+         <obj_property name="ElementShortName">s_dut_o_busy</obj_property>
+         <obj_property name="ObjectShortName">s_dut_o_busy</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/s_dut_o_busy_r" type="logic">
+         <obj_property name="ElementShortName">s_dut_o_busy_r</obj_property>
+         <obj_property name="ObjectShortName">s_dut_o_busy_r</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/s_dut_o_busy_fe" type="logic">
+         <obj_property name="ElementShortName">s_dut_o_busy_fe</obj_property>
+         <obj_property name="ObjectShortName">s_dut_o_busy_fe</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/s_dut_o_done" type="logic">
+         <obj_property name="ElementShortName">s_dut_o_done</obj_property>
+         <obj_property name="ObjectShortName">s_dut_o_done</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/s_dut_o_done_r" type="logic">
+         <obj_property name="ElementShortName">s_dut_o_done_r</obj_property>
+         <obj_property name="ObjectShortName">s_dut_o_done_r</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/s_dut_o_done_re" type="logic">
+         <obj_property name="ElementShortName">s_dut_o_done_re</obj_property>
+         <obj_property name="ObjectShortName">s_dut_o_done_re</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/s_dut_o_ack_err" type="logic">
+         <obj_property name="ElementShortName">s_dut_o_ack_err</obj_property>
+         <obj_property name="ObjectShortName">s_dut_o_ack_err</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/s_sda" type="logic">
+         <obj_property name="ElementShortName">s_sda</obj_property>
+         <obj_property name="ObjectShortName">s_sda</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/s_scl" type="logic">
+         <obj_property name="ElementShortName">s_scl</obj_property>
+         <obj_property name="ObjectShortName">s_scl</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/s_data_cnt" type="other">
+         <obj_property name="ElementShortName">s_data_cnt</obj_property>
+         <obj_property name="ObjectShortName">s_data_cnt</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/s_array_record_data" type="array">
+         <obj_property name="ElementShortName">s_array_record_data[0:1]</obj_property>
+         <obj_property name="ObjectShortName">s_array_record_data[0:1]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/c_sim_clk_freq" type="other">
+         <obj_property name="ElementShortName">c_sim_clk_freq</obj_property>
+         <obj_property name="ObjectShortName">c_sim_clk_freq</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/c_sim_clk_delay" type="other">
+         <obj_property name="ElementShortName">c_sim_clk_delay</obj_property>
+         <obj_property name="ObjectShortName">c_sim_clk_delay</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/c_sim_rst_delay" type="other">
+         <obj_property name="ElementShortName">c_sim_rst_delay</obj_property>
+         <obj_property name="ObjectShortName">c_sim_rst_delay</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/c_sim_clk_period_ns" type="other">
+         <obj_property name="ElementShortName">c_sim_clk_period_ns</obj_property>
+         <obj_property name="ObjectShortName">c_sim_clk_period_ns</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/c_sim_clk_period" type="other">
+         <obj_property name="ElementShortName">c_sim_clk_period</obj_property>
+         <obj_property name="ObjectShortName">c_sim_clk_period</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/c_osc_delay" type="other">
+         <obj_property name="ElementShortName">c_osc_delay</obj_property>
+         <obj_property name="ObjectShortName">c_osc_delay</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/c_osc_freq" type="other">
+         <obj_property name="ElementShortName">c_osc_freq</obj_property>
+         <obj_property name="ObjectShortName">c_osc_freq</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/c_osc_period_ns" type="other">
+         <obj_property name="ElementShortName">c_osc_period_ns</obj_property>
+         <obj_property name="ObjectShortName">c_osc_period_ns</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/c_dut_rst_delay" type="other">
+         <obj_property name="ElementShortName">c_dut_rst_delay</obj_property>
+         <obj_property name="ObjectShortName">c_dut_rst_delay</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/c_dut_clk_freq" type="other">
+         <obj_property name="ElementShortName">c_dut_clk_freq</obj_property>
+         <obj_property name="ObjectShortName">c_dut_clk_freq</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/c_heartbeat_freq" type="other">
+         <obj_property name="ElementShortName">c_heartbeat_freq</obj_property>
+         <obj_property name="ObjectShortName">c_heartbeat_freq</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/c_dut_clk_period" type="other">
+         <obj_property name="ElementShortName">c_dut_clk_period</obj_property>
+         <obj_property name="ObjectShortName">c_dut_clk_period</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/c_heartbeat_period" type="other">
+         <obj_property name="ElementShortName">c_heartbeat_period</obj_property>
+         <obj_property name="ObjectShortName">c_heartbeat_period</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/c_alive_cycle_full" type="other">
+         <obj_property name="ElementShortName">c_alive_cycle_full</obj_property>
+         <obj_property name="ObjectShortName">c_alive_cycle_full</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/c_alive_cycle_half" type="other">
+         <obj_property name="ElementShortName">c_alive_cycle_half</obj_property>
+         <obj_property name="ObjectShortName">c_alive_cycle_half</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/c_dut_clk_data_freq" type="other">
+         <obj_property name="ElementShortName">c_dut_clk_data_freq</obj_property>
+         <obj_property name="ObjectShortName">c_dut_clk_data_freq</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/c_ratio_clk_sim_clk_dut_data" type="other">
+         <obj_property name="ElementShortName">c_ratio_clk_sim_clk_dut_data</obj_property>
+         <obj_property name="ObjectShortName">c_ratio_clk_sim_clk_dut_data</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/c_iic_slave_addr" type="array">
+         <obj_property name="ElementShortName">c_iic_slave_addr[6:0]</obj_property>
+         <obj_property name="ObjectShortName">c_iic_slave_addr[6:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/c_data_nb" type="other">
+         <obj_property name="ElementShortName">c_data_nb</obj_property>
+         <obj_property name="ObjectShortName">c_data_nb</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/c_array_record_data" type="array">
+         <obj_property name="ElementShortName">c_array_record_data[0:1]</obj_property>
+         <obj_property name="ObjectShortName">c_array_record_data[0:1]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/c_sim_duration_factor" type="other">
+         <obj_property name="ElementShortName">c_sim_duration_factor</obj_property>
+         <obj_property name="ObjectShortName">c_sim_duration_factor</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/c_sim_duration_ns" type="other">
+         <obj_property name="ElementShortName">c_sim_duration_ns</obj_property>
+         <obj_property name="ObjectShortName">c_sim_duration_ns</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/c_file_log_name" type="array">
+         <obj_property name="ElementShortName">c_file_log_name[1:41]</obj_property>
+         <obj_property name="ObjectShortName">c_file_log_name[1:41]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/c_file_rpt_name" type="array">
+         <obj_property name="ElementShortName">c_file_rpt_name[1:41]</obj_property>
+         <obj_property name="ObjectShortName">c_file_rpt_name[1:41]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group168" type="group">
+      <obj_property name="label">inst_gen_heartbeat</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/bch_core_iic/inst_gen_heartbeat/i_clk" type="logic">
+         <obj_property name="ElementShortName">i_clk</obj_property>
+         <obj_property name="ObjectShortName">i_clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_gen_heartbeat/i_rst" type="logic">
+         <obj_property name="ElementShortName">i_rst</obj_property>
+         <obj_property name="ObjectShortName">i_rst</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_gen_heartbeat/o_alive" type="logic">
+         <obj_property name="ElementShortName">o_alive</obj_property>
+         <obj_property name="ObjectShortName">o_alive</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_gen_heartbeat/o_error" type="array">
+         <obj_property name="ElementShortName">o_error[7:0]</obj_property>
+         <obj_property name="ObjectShortName">o_error[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_gen_heartbeat/s_clk" type="logic">
+         <obj_property name="ElementShortName">s_clk</obj_property>
+         <obj_property name="ObjectShortName">s_clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_gen_heartbeat/s_rst" type="logic">
+         <obj_property name="ElementShortName">s_rst</obj_property>
+         <obj_property name="ObjectShortName">s_rst</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_gen_heartbeat/s_cnt" type="other">
+         <obj_property name="ElementShortName">s_cnt</obj_property>
+         <obj_property name="ObjectShortName">s_cnt</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_gen_heartbeat/s_alive" type="logic">
+         <obj_property name="ElementShortName">s_alive</obj_property>
+         <obj_property name="ObjectShortName">s_alive</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_gen_heartbeat/s_error_ratio" type="logic">
+         <obj_property name="ElementShortName">s_error_ratio</obj_property>
+         <obj_property name="ObjectShortName">s_error_ratio</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_gen_heartbeat/g_clk_i_freq" type="other">
+         <obj_property name="ElementShortName">g_clk_i_freq</obj_property>
+         <obj_property name="ObjectShortName">g_clk_i_freq</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_gen_heartbeat/g_clk_o_freq" type="other">
+         <obj_property name="ElementShortName">g_clk_o_freq</obj_property>
+         <obj_property name="ObjectShortName">g_clk_o_freq</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_gen_heartbeat/c_clk_ratio" type="other">
+         <obj_property name="ElementShortName">c_clk_ratio</obj_property>
+         <obj_property name="ObjectShortName">c_clk_ratio</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group196" type="group">
+      <obj_property name="label">inst_core_iic_master</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/bch_core_iic/inst_core_iic_master/clk" type="logic">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_core_iic_master/reset_n" type="logic">
+         <obj_property name="ElementShortName">reset_n</obj_property>
+         <obj_property name="ObjectShortName">reset_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_core_iic_master/ena" type="logic">
+         <obj_property name="ElementShortName">ena</obj_property>
+         <obj_property name="ObjectShortName">ena</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_core_iic_master/addr" type="array">
+         <obj_property name="ElementShortName">addr[6:0]</obj_property>
+         <obj_property name="ObjectShortName">addr[6:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_core_iic_master/rw" type="logic">
+         <obj_property name="ElementShortName">rw</obj_property>
+         <obj_property name="ObjectShortName">rw</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_core_iic_master/data_wr" type="array">
+         <obj_property name="ElementShortName">data_wr[7:0]</obj_property>
+         <obj_property name="ObjectShortName">data_wr[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_core_iic_master/busy" type="logic">
+         <obj_property name="ElementShortName">busy</obj_property>
+         <obj_property name="ObjectShortName">busy</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_core_iic_master/done" type="logic">
+         <obj_property name="ElementShortName">done</obj_property>
+         <obj_property name="ObjectShortName">done</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_core_iic_master/data_rd" type="array">
+         <obj_property name="ElementShortName">data_rd[7:0]</obj_property>
+         <obj_property name="ObjectShortName">data_rd[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_core_iic_master/ack_error" type="logic">
+         <obj_property name="ElementShortName">ack_error</obj_property>
+         <obj_property name="ObjectShortName">ack_error</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_core_iic_master/sda" type="logic">
+         <obj_property name="ElementShortName">sda</obj_property>
+         <obj_property name="ObjectShortName">sda</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_core_iic_master/scl" type="logic">
+         <obj_property name="ElementShortName">scl</obj_property>
+         <obj_property name="ObjectShortName">scl</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_core_iic_master/state" type="other">
+         <obj_property name="ElementShortName">state</obj_property>
+         <obj_property name="ObjectShortName">state</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_core_iic_master/data_clk" type="logic">
+         <obj_property name="ElementShortName">data_clk</obj_property>
+         <obj_property name="ObjectShortName">data_clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_core_iic_master/data_clk_prev" type="logic">
+         <obj_property name="ElementShortName">data_clk_prev</obj_property>
+         <obj_property name="ObjectShortName">data_clk_prev</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_core_iic_master/scl_clk" type="logic">
+         <obj_property name="ElementShortName">scl_clk</obj_property>
+         <obj_property name="ObjectShortName">scl_clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_core_iic_master/scl_ena" type="logic">
+         <obj_property name="ElementShortName">scl_ena</obj_property>
+         <obj_property name="ObjectShortName">scl_ena</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_core_iic_master/sda_int" type="logic">
+         <obj_property name="ElementShortName">sda_int</obj_property>
+         <obj_property name="ObjectShortName">sda_int</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_core_iic_master/sda_ena_n" type="logic">
+         <obj_property name="ElementShortName">sda_ena_n</obj_property>
+         <obj_property name="ObjectShortName">sda_ena_n</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_core_iic_master/addr_rw" type="array">
+         <obj_property name="ElementShortName">addr_rw[7:0]</obj_property>
+         <obj_property name="ObjectShortName">addr_rw[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_core_iic_master/data_tx" type="array">
+         <obj_property name="ElementShortName">data_tx[7:0]</obj_property>
+         <obj_property name="ObjectShortName">data_tx[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_core_iic_master/data_rx" type="array">
+         <obj_property name="ElementShortName">data_rx[7:0]</obj_property>
+         <obj_property name="ObjectShortName">data_rx[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_core_iic_master/bit_cnt" type="other">
+         <obj_property name="ElementShortName">bit_cnt</obj_property>
+         <obj_property name="ObjectShortName">bit_cnt</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_core_iic_master/stretch" type="logic">
+         <obj_property name="ElementShortName">stretch</obj_property>
+         <obj_property name="ObjectShortName">stretch</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_core_iic_master/input_clk" type="other">
+         <obj_property name="ElementShortName">input_clk</obj_property>
+         <obj_property name="ObjectShortName">input_clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_core_iic_master/bus_clk" type="other">
+         <obj_property name="ElementShortName">bus_clk</obj_property>
+         <obj_property name="ObjectShortName">bus_clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_core_iic_master/divider" type="other">
+         <obj_property name="ElementShortName">divider</obj_property>
+         <obj_property name="ObjectShortName">divider</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group252" type="group">
+      <obj_property name="label">inst_model_eeprom_iic</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/bch_core_iic/inst_model_eeprom_iic/scl" type="logic">
+         <obj_property name="ElementShortName">scl</obj_property>
+         <obj_property name="ObjectShortName">scl</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_model_eeprom_iic/sda" type="logic">
+         <obj_property name="ElementShortName">sda</obj_property>
+         <obj_property name="ObjectShortName">sda</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_model_eeprom_iic/clk" type="logic">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_model_eeprom_iic/rst_l" type="logic">
+         <obj_property name="ElementShortName">rst_l</obj_property>
+         <obj_property name="ObjectShortName">rst_l</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_model_eeprom_iic/mem" type="array">
+         <obj_property name="ElementShortName">mem[255:0][7:0]</obj_property>
+         <obj_property name="ObjectShortName">mem[255:0][7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_model_eeprom_iic/word_address" type="array">
+         <obj_property name="ElementShortName">word_address[7:0]</obj_property>
+         <obj_property name="ObjectShortName">word_address[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_model_eeprom_iic/start_detect" type="logic">
+         <obj_property name="ElementShortName">start_detect</obj_property>
+         <obj_property name="ObjectShortName">start_detect</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_model_eeprom_iic/stop_detect" type="logic">
+         <obj_property name="ElementShortName">stop_detect</obj_property>
+         <obj_property name="ObjectShortName">stop_detect</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_model_eeprom_iic/sda_reg" type="logic">
+         <obj_property name="ElementShortName">sda_reg</obj_property>
+         <obj_property name="ObjectShortName">sda_reg</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_model_eeprom_iic/sda_reg_delayed" type="logic">
+         <obj_property name="ElementShortName">sda_reg_delayed</obj_property>
+         <obj_property name="ObjectShortName">sda_reg_delayed</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_model_eeprom_iic/scl_reg" type="logic">
+         <obj_property name="ElementShortName">scl_reg</obj_property>
+         <obj_property name="ObjectShortName">scl_reg</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_model_eeprom_iic/scl_reg_delayed" type="logic">
+         <obj_property name="ElementShortName">scl_reg_delayed</obj_property>
+         <obj_property name="ObjectShortName">scl_reg_delayed</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_model_eeprom_iic/start_pulse" type="logic">
+         <obj_property name="ElementShortName">start_pulse</obj_property>
+         <obj_property name="ObjectShortName">start_pulse</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_model_eeprom_iic/stop_pulse" type="logic">
+         <obj_property name="ElementShortName">stop_pulse</obj_property>
+         <obj_property name="ObjectShortName">stop_pulse</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_model_eeprom_iic/scl_pulse" type="logic">
+         <obj_property name="ElementShortName">scl_pulse</obj_property>
+         <obj_property name="ObjectShortName">scl_pulse</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_model_eeprom_iic/scl_neg_pulse" type="logic">
+         <obj_property name="ElementShortName">scl_neg_pulse</obj_property>
+         <obj_property name="ObjectShortName">scl_neg_pulse</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_model_eeprom_iic/address_reg_7" type="array">
+         <obj_property name="ElementShortName">address_reg_7[6:0]</obj_property>
+         <obj_property name="ObjectShortName">address_reg_7[6:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_model_eeprom_iic/temp10" type="array">
+         <obj_property name="ElementShortName">temp10[9:0]</obj_property>
+         <obj_property name="ObjectShortName">temp10[9:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_model_eeprom_iic/address_reg_10_upper" type="array">
+         <obj_property name="ElementShortName">address_reg_10_upper[6:0]</obj_property>
+         <obj_property name="ObjectShortName">address_reg_10_upper[6:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_model_eeprom_iic/address_reg_10_lower" type="array">
+         <obj_property name="ElementShortName">address_reg_10_lower[7:0]</obj_property>
+         <obj_property name="ObjectShortName">address_reg_10_lower[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_model_eeprom_iic/current_state" type="array">
+         <obj_property name="ElementShortName">current_state[3:0]</obj_property>
+         <obj_property name="ObjectShortName">current_state[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_model_eeprom_iic/next_state" type="array">
+         <obj_property name="ElementShortName">next_state[3:0]</obj_property>
+         <obj_property name="ObjectShortName">next_state[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_model_eeprom_iic/in_reg" type="array">
+         <obj_property name="ElementShortName">in_reg[7:0]</obj_property>
+         <obj_property name="ObjectShortName">in_reg[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_model_eeprom_iic/out_reg" type="array">
+         <obj_property name="ElementShortName">out_reg[7:0]</obj_property>
+         <obj_property name="ObjectShortName">out_reg[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_model_eeprom_iic/bit_counter" type="array">
+         <obj_property name="ElementShortName">bit_counter[3:0]</obj_property>
+         <obj_property name="ObjectShortName">bit_counter[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_model_eeprom_iic/r_w_bit" type="logic">
+         <obj_property name="ElementShortName">r_w_bit</obj_property>
+         <obj_property name="ObjectShortName">r_w_bit</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_model_eeprom_iic/hit_7" type="logic">
+         <obj_property name="ElementShortName">hit_7</obj_property>
+         <obj_property name="ObjectShortName">hit_7</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_model_eeprom_iic/hit_10_upper" type="logic">
+         <obj_property name="ElementShortName">hit_10_upper</obj_property>
+         <obj_property name="ObjectShortName">hit_10_upper</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_model_eeprom_iic/hit_10_lower" type="logic">
+         <obj_property name="ElementShortName">hit_10_lower</obj_property>
+         <obj_property name="ObjectShortName">hit_10_lower</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_model_eeprom_iic/sda_out" type="logic">
+         <obj_property name="ElementShortName">sda_out</obj_property>
+         <obj_property name="ObjectShortName">sda_out</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_model_eeprom_iic/in_reg_enable" type="logic">
+         <obj_property name="ElementShortName">in_reg_enable</obj_property>
+         <obj_property name="ObjectShortName">in_reg_enable</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_model_eeprom_iic/out_en" type="logic">
+         <obj_property name="ElementShortName">out_en</obj_property>
+         <obj_property name="ObjectShortName">out_en</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_model_eeprom_iic/word_add_flag" type="logic">
+         <obj_property name="ElementShortName">word_add_flag</obj_property>
+         <obj_property name="ObjectShortName">word_add_flag</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_model_eeprom_iic/ack_flag" type="logic">
+         <obj_property name="ElementShortName">ack_flag</obj_property>
+         <obj_property name="ObjectShortName">ack_flag</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_model_eeprom_iic/temp_add_upper" type="array">
+         <obj_property name="ElementShortName">temp_add_upper[7:1]</obj_property>
+         <obj_property name="ObjectShortName">temp_add_upper[7:1]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_model_eeprom_iic/temp_add_lower" type="array">
+         <obj_property name="ElementShortName">temp_add_lower[7:0]</obj_property>
+         <obj_property name="ObjectShortName">temp_add_lower[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_model_eeprom_iic/read_10_flag" type="logic">
+         <obj_property name="ElementShortName">read_10_flag</obj_property>
+         <obj_property name="ObjectShortName">read_10_flag</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_model_eeprom_iic/i" type="other">
+         <obj_property name="ElementShortName">i</obj_property>
+         <obj_property name="ObjectShortName">i</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_model_eeprom_iic/bool" type="logic">
+         <obj_property name="ElementShortName">bool</obj_property>
+         <obj_property name="ObjectShortName">bool</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_model_eeprom_iic/seven_bit" type="other">
+         <obj_property name="ElementShortName">seven_bit</obj_property>
+         <obj_property name="ObjectShortName">seven_bit</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_model_eeprom_iic/ten_bit" type="other">
+         <obj_property name="ElementShortName">ten_bit</obj_property>
+         <obj_property name="ObjectShortName">ten_bit</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_model_eeprom_iic/ten_bit_add" type="array">
+         <obj_property name="ElementShortName">ten_bit_add[4:0]</obj_property>
+         <obj_property name="ObjectShortName">ten_bit_add[4:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_model_eeprom_iic/debug" type="logic">
+         <obj_property name="ElementShortName">debug</obj_property>
+         <obj_property name="ObjectShortName">debug</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_model_eeprom_iic/period" type="other">
+         <obj_property name="ElementShortName">period</obj_property>
+         <obj_property name="ObjectShortName">period</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_model_eeprom_iic/reset_time" type="other">
+         <obj_property name="ElementShortName">reset_time</obj_property>
+         <obj_property name="ObjectShortName">reset_time</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_model_eeprom_iic/address_mode" type="other">
+         <obj_property name="ElementShortName">address_mode</obj_property>
+         <obj_property name="ObjectShortName">address_mode</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_model_eeprom_iic/seven_bit_address" type="array">
+         <obj_property name="ElementShortName">seven_bit_address[6:0]</obj_property>
+         <obj_property name="ObjectShortName">seven_bit_address[6:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_model_eeprom_iic/ten_bit_address" type="array">
+         <obj_property name="ElementShortName">ten_bit_address[9:0]</obj_property>
+         <obj_property name="ObjectShortName">ten_bit_address[9:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_model_eeprom_iic/idle" type="array">
+         <obj_property name="ElementShortName">idle[3:0]</obj_property>
+         <obj_property name="ObjectShortName">idle[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_model_eeprom_iic/start" type="array">
+         <obj_property name="ElementShortName">start[3:0]</obj_property>
+         <obj_property name="ObjectShortName">start[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_model_eeprom_iic/address" type="array">
+         <obj_property name="ElementShortName">address[3:0]</obj_property>
+         <obj_property name="ObjectShortName">address[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_model_eeprom_iic/ack" type="array">
+         <obj_property name="ElementShortName">ack[3:0]</obj_property>
+         <obj_property name="ObjectShortName">ack[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_model_eeprom_iic/data" type="array">
+         <obj_property name="ElementShortName">data[3:0]</obj_property>
+         <obj_property name="ObjectShortName">data[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_model_eeprom_iic/data_ack" type="array">
+         <obj_property name="ElementShortName">data_ack[3:0]</obj_property>
+         <obj_property name="ObjectShortName">data_ack[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bch_core_iic/inst_model_eeprom_iic/tdh" type="other">
+         <obj_property name="ElementShortName">tdh</obj_property>
+         <obj_property name="ObjectShortName">tdh</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>
